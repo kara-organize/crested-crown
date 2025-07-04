@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kara-organize.github.io/crested-crown/static/css/main.e6c13ad2.css",
+    "main.js": "/kara-organize.github.io/crested-crown/static/js/main.337624eb.js",
+    "static/js/453.14becb26.chunk.js": "/kara-organize.github.io/crested-crown/static/js/453.14becb26.chunk.js",
+    "index.html": "/kara-organize.github.io/crested-crown/index.html",
+    "main.e6c13ad2.css.map": "/kara-organize.github.io/crested-crown/static/css/main.e6c13ad2.css.map",
+    "main.337624eb.js.map": "/kara-organize.github.io/crested-crown/static/js/main.337624eb.js.map",
+    "453.14becb26.chunk.js.map": "/kara-organize.github.io/crested-crown/static/js/453.14becb26.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.337624eb.js"
+  ]
+}
