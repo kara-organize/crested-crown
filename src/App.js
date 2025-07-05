@@ -315,6 +315,7 @@ const FloatingClock = () => {
 const FloatingCountdown = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState({});
 
+  // calculateTimeLeft is defined here, before its use in useState and useEffect
   const calculateTimeLeft = useCallback(() => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
@@ -328,7 +329,7 @@ const FloatingCountdown = ({ targetDate }) => {
       };
     }
     return timeLeft;
-  }, [targetDate, calculateTimeLeft]);
+  }, [targetDate]); // targetDate is a dependency for calculateTimeLeft
 
   useEffect(() => {
     setTimeLeft(calculateTimeLeft());
@@ -336,7 +337,7 @@ const FloatingCountdown = ({ targetDate }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, [targetDate, calculateTimeLeft]);
+  }, [calculateTimeLeft]); // calculateTimeLeft is now the only dependency
 
   const timerComponents = [];
 
@@ -398,7 +399,7 @@ const App = () => {
   };
 
   const overallProgress = calculateProgress(projectPlan);
-  const phase1Progress = calculateProgress(projectPlan, 'phase1');
+  // Removed phase1Progress as it was unused.
 
 
   // Target date for overall project completion (e.g., Aug 19th, 2025)
